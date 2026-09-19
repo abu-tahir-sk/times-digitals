@@ -64,7 +64,7 @@ export default function DashboardPage() {
             variants={itemVariants}
             className="text-slate-500 dark:text-slate-400 mt-2 text-lg"
           >
-            Here's what's happening with your digital assets today.
+            Here&apos;s what&apos;s happening with your digital assets today.
           </motion.p>
         </div>
         

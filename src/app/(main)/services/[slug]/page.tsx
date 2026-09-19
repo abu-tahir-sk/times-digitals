@@ -26,11 +26,6 @@ export default async function ServicePage({ params }: Props) {
     notFound();
   }
 
-  // Fetch the service data from the API using the dynamic slug
-  const res = await fetch(`/api/services/${params.slug}`);
-  if (!res.ok) throw new Error("Failed to fetch");
-  const json = await res.json();
-  setData(json);
 
   return (
     <div className="min-h-screen bg-transparent selection:bg-[#C31621]/20 selection:text-[#ff4d5a] font-sans">
@@ -71,7 +66,7 @@ export default async function ServicePage({ params }: Props) {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {service.features.map((feature, idx) => (
+            {service.features.map((feature: any, idx: any) => (
               <HoverCard3D key={idx}>
                 <div className="h-full p-8 rounded-3xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-sm hover:border-[#C31621]/40 dark:hover:border-[#C31621]/40 transition-all duration-500 group">
                   <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-black/50 border border-slate-200 dark:border-white/10 flex items-center justify-center mb-6 group-hover:bg-[#C31621]/10 group-hover:border-[#C31621]/30 transition-all duration-300">
@@ -95,7 +90,7 @@ export default async function ServicePage({ params }: Props) {
           </div>
           
           <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#C31621]/50 before:to-transparent">
-            {service.process.map((step, idx) => (
+            {service.process.map((step: any, idx: any) => (
               <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#C31621] text-white shadow-[0_0_15px_rgba(195,22,33,0.3)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-sm">
                   0{idx + 1}
@@ -115,7 +110,7 @@ export default async function ServicePage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-10">Technologies We Use</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {service.technologies.map((tech, idx) => (
+            {service.technologies.map((tech: any, idx: any) => (
               <div key={idx} className="flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-sm hover:border-[#C31621]/30 dark:hover:border-[#C31621]/40 transition-colors cursor-default">
                 <CheckCircle2 className="w-4 h-4 text-[#C31621] dark:text-[#ff4d5a]" />
                 <span className="font-semibold text-slate-700 dark:text-white/80">{tech}</span>

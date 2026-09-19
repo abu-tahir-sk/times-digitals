@@ -12,7 +12,7 @@ export default function LogoSettingsPage() {
     >
       <div>
         <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Logo Settings</h1>
-        <p className="text-slate-500 dark:text-slate-400 mt-2">Update your website's primary logo and favicon.</p>
+        <p className="text-slate-500 dark:text-slate-400 mt-2">Update your website&apos;s primary logo and favicon.</p>
       </div>
 
       <div className="bg-white dark:bg-[rgba(15,15,15,0.8)] backdrop-blur-xl border border-slate-200 dark:border-[rgba(255,255,255,0.08)] rounded-[32px] p-8 shadow-sm">
