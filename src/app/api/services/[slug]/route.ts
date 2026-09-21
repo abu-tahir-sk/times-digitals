@@ -19,7 +19,7 @@ export async function GET(
       title: f.title,
       description: f.description,
       // We send the icon name as a string, e.g., "Monitor", "Zap", etc.
-      iconName: f.icon.displayName || f.icon.name || 'Check'
+      iconName: (f.icon as any).displayName || (f.icon as any).name || 'Check'
     }))
   };
 
